@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@100&display=swap');
+.maintext{
+    color:rgb(4, 78, 138);
+    font-family: Poppins,"Rising Harder",  sans-serif;
+    font-size: 75px;
+    font-weight: 200;
+    background-color: rgb(60, 78, 78,0.5);
+}
+
+.user{
+    display: Flex;
+    justify-content: space-between;
+    background-color: rgba(7, 0, 50, 0.6);
+    
+}
+
+.UserImg{
+    /* margin: 30px;
+    border-radius: 10px; */
+    background-image: url(https://i.pinimg.com/564x/98/dd/53/98dd536689bc6ebf3ebcc8005718fc89.jpg);
+    background-repeat: no-repeat;
+    width: 565px;
+    height: 400px;
+    transform: scaleX(-1);
+}
+.asUser{
+    margin: 30px;
+}
+
+.admin{
+    margin-top: 40px;
+    display: Flex;
+    justify-content: space-between;
+    background-color: rgba(10, 9, 10, 0.8);
+    
+}
+
+.AdminImg{
+    /* border-radius: 10px; */
+    background-image: url(https://i.pinimg.com/564x/91/0f/86/910f861cb35d399c27f251603eecb289.jpg);
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 500px;
+    transform: scaleX(-1);
+
+}
+
+.asAdmin{
+    margin: 30px;
+  
+}
+
+#p1{
+    color: lightblue;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 27px;
+    width: 850px;
+}
+
+#p2{
+    color: blanchedalmond;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 27px;
+    width: 850px;
+}
+
+/* for signup as Admin */
+
+.SignAfont{
+    font-family: 'Montserrat', sans-serif;
+    height: 40px;
+}
+
+/* for user signup */
+
+.signUfont{
+    font-family: 'Montserrat', sans-serif;
+    height: 40px;
+}
