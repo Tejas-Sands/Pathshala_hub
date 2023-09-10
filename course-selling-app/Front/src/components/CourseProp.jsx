@@ -12,7 +12,7 @@ const[courses, setCourses] = useState([]);
  
     // Function to fetch courses
     function fetchCourses() {
-      fetch("http://localhost:3000/admin/courses", {
+      fetch("https://back-5wxx.onrender.com/admin/courses", {
         method: "GET",
         headers: {
           "Authorization": "Bearer " + localStorage.getItem("token")
@@ -30,7 +30,7 @@ const[courses, setCourses] = useState([]);
 
   // Function to delete a course
   function deleteCourse() {
-    fetch(`http://localhost:3000/admin/courses/${props.course.courseId}`, {
+    fetch(`https://back-5wxx.onrender.com/admin/courses/${props.course.courseId}`, {
       method: 'DELETE',
       headers: {
         "Authorization": "Bearer " + localStorage.getItem("token"),

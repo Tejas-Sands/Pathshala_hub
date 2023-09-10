@@ -372,19 +372,36 @@ app.get('/admin/me', authenticateJwt, (req,res)=>{
     })
 })
 
-// app.post('./admin/courses', authenticateJwt, async(req,res)=>{
-//     const course = new ?c!!!ourse(req.body);
-//     await course.save();
-//     res.json({message:'course created successfully', courseId: course.id})
-// });
+//const course = req.body;
+//   function generateRandomId() {
+//     return Math.random().toString(36).substring(2, 10); // Generates an 8-character random string
+//   }
+
+//   const cId = generateRandomId();
+//   course.courseId = cId;
 
 app.post('/admin/courses', authenticateJwt, async (req, res) => {
     const course = new Course(req.body);
+    // function generateRandomId() {
+    //       return Math.random().toString(36).substring(2, 10); // Generates an 8-character random string
+    //     }
+      
+    //     const cId = generateRandomId();
+        // course.courseId = course_id;
     await course.save();
     res.json({ message: 'Course created successfully', courseId: course.id });
   });
 
-
+// app.put('/admin/courses/:courseId', authenticateJwt, (req, res) => {
+//   const course = COURSES.find(c => c.courseId === req.params.courseId);
+//   if (course) {
+//     Object.assign(course, req.body);
+//     fs.writeFileSync('courses.json', JSON.stringify(COURSES));
+//     res.json({ message: 'Course updated successfully' });
+//   } else {
+//     res.status(404).json({ message: 'Course not found' });
+//   }
+// });
 app.put('/admin/courses/:courseId', authenticateJwt, async(req,res)=>{
     const course = await Course.findByIdAndUpdate(req.params.courseId, req.body, {new:true});
     if(course){
@@ -400,8 +417,8 @@ app.get('/admin/courses', authenticateJwt, async (req, res) => {
     res.json({ courses });
   });
 
-  app.delete("/admin/courses/:courseId", authenticateJwt, async (req, res) => {
-    const course = await Course.findByIdAndDelete(req.params.courseId, req.body, {
+  app.delete("/admin/courses/:courseId", authenticateJwt,  (req, res) => {
+    const course =  Course.findByIdAndDelete(req.params.courseId, req.body, {
       new: true,
     });
     if (course) {

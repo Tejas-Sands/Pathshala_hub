@@ -39,7 +39,7 @@ const [ password, setPassword] = useState('')
             }
                 // username,
                 // password
-                fetch("http://localhost:3000/admin/signup",{
+                fetch("https://back-5wxx.onrender.com/admin/signup",{
                     method:"POST",
                     body:JSON.stringify({
                         username: username,

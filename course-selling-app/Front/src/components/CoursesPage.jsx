@@ -11,7 +11,7 @@ export default function CoursePage(){
     const[courses, setCourses] = useState([]);
     useEffect(() => {
 
-        fetch("http://localhost:3000/admin/courses",{
+        fetch("https://back-5wxx.onrender.com/admin/courses",{
                 method:"GET",               
                 headers:{
                     "Authorization":"Bearer " + localStorage.getItem("token")

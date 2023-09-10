@@ -16,7 +16,7 @@ export default function UserCourse(){
         }
             // username,
             // password
-            fetch("http://localhost:3000/users/courses",{
+            fetch("https://back-5wxx.onrender.com/users/courses",{
                 method:"GET",
                
                 headers:{

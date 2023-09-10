@@ -81,7 +81,7 @@ function UpdateC(props){
     const [ price, setPrice] = useState('')
     const [ img, setImg] = useState('')
     const navigate = useNavigate();
-    const course = props.course;
+    const course = props.courses;
 
     return(
         <>
@@ -129,7 +129,7 @@ function UpdateC(props){
         }
             // username,
             // password
-            fetch(`http://localhost:3000/admin/courses/${course.courseId}` ,{
+            fetch(`https://back-5wxx.onrender.com/admin/courses/${course.courseId}` ,{
                 method:"PUT",
                 body:JSON.stringify({
                     title: coursename,

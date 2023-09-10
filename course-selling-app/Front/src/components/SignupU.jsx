@@ -41,7 +41,7 @@ const navigate = useNavigate();
             }
                 // username,
                 // password
-                fetch("http://localhost:3000/users/signup",{
+                fetch("https://back-5wxx.onrender.com/users/signup",{
                     method:"POST",
                     body:JSON.stringify({
                         username: username,

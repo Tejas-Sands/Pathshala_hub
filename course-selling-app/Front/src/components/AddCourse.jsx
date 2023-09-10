@@ -54,7 +54,7 @@ export default function AddCourse(){
         }
             // username,
             // password
-            fetch("http://localhost:3000/admin/courses",{
+            fetch("https://back-5wxx.onrender.com/admin/courses",{
                 method:"POST",
                 body:JSON.stringify({
                     title: coursename,
